@@ -10,13 +10,13 @@
 document.documentElement.className = document.documentElement.className.replace(/\bnojs\b/g, 'js');
 
 // Check that all required assets are uploaded and up-to-date
-if(typeof Muse == "undefined") window.Muse = {}; window.Muse.assets = {"required":["museutils.js", "museconfig.js", "jquery.watch.js", "jquery.scrolleffects.js", "require.js", "index.css"], "outOfDate":[]};
+if(typeof Muse == "undefined") window.Muse = {}; window.Muse.assets = {"required":["museutils.js", "museconfig.js", "jquery.watch.js", "jquery.musepolyfill.bgsize.js", "jquery.scrolleffects.js", "require.js", "index.css"], "outOfDate":[]};
 </script>
   
   <title>Home</title>
   <!-- CSS -->
   <link rel="stylesheet" type="text/css" href="css/site_global.css?crc=444006867"/>
-  <link rel="stylesheet" type="text/css" href="css/index.css?crc=3992495930" id="pagesheet"/>
+  <link rel="stylesheet" type="text/css" href="css/index.css?crc=8161467" id="pagesheet"/>
    </head>
  <body>
 
@@ -268,9 +268,22 @@ document.body.onload = castParallax();
 
     </div>
    </div>
+   <div class="clearfix grpelem" id="pu777"><!-- group -->
+    <div class="browser_width" id="u777-bw">
+     <div class="museBGSize ose_pre_init" id="u777"><!-- simple frame --></div>
+    </div>
+    <div class="ose_pre_init" id="u690"><!-- animation -->
+     <iframe class="animationContainer an_invi" id="U873_animation" src="assets/untitled-32/saved_backup.html" scrolling="no"></iframe>
+    </div>
+   </div>
    <div class="verticalspacer" data-offset-top="1019" data-content-above-spacer="1019" data-content-below-spacer="965"></div>
-   <div class="browser_width grpelem" id="u98-bw">
-    <div id="u98"><!-- simple frame --></div>
+   <div class="clearfix grpelem" id="pu98"><!-- group -->
+    <div class="browser_width grpelem" id="u98-bw">
+     <div id="u98"><!-- simple frame --></div>
+    </div>
+    <div class="browser_width grpelem" id="u853-bw">
+     <div id="u853"><!-- simple frame --></div>
+    </div>
    </div>
   </div>
   <!-- Other scripts -->
@@ -284,15 +297,19 @@ var suppressMissingFileError = false
 k[1]:null,k=k&&k[2]?k[2]:null;switch(k.toLowerCase()){case "css":i=i.replace(/\W/gi,"_").replace(/^([^a-z])/gi,"_$1");g.className+=" "+i;i=a(d(g,"color"));k=a(d(g,"backgroundColor"));i!=0||k!=0?(Muse.assets.required.splice(j,1),"undefined"!=typeof b[l]&&(i!=b[l]>>>24||k!=(b[l]&16777215))&&Muse.assets.outOfDate.push(l)):j++;g.className="version";break;case "js":j++;break;default:throw Error("Unsupported file type: "+k);}}c?c().jquery!="1.8.3"&&Muse.assets.outOfDate.push("jquery-1.8.3.min.js"):Muse.assets.required.push("jquery-1.8.3.min.js");
 g.parentNode.removeChild(g);if(Muse.assets.outOfDate.length||Muse.assets.required.length)g="Some files on the server may be missing or incorrect. Clear browser cache and try again. If the problem persists please contact website author.",f&&Muse.assets.outOfDate.length&&(g+="\nOut of date: "+Muse.assets.outOfDate.join(",")),f&&Muse.assets.required.length&&(g+="\nMissing: "+Muse.assets.required.join(",")),suppressMissingFileError?(g+="\nUse SuppressMissingFileError key in AppPrefs.xml to show missing file error pop up.",console.log(g)):alert(g)};location&&location.search&&location.search.match&&location.search.match(/muse_debug/gi)?
 setTimeout(function(){f(!0)},5E3):f()}};
-var muse_init=function(){require.config({baseUrl:""});require(["jquery","museutils","whatinput","jquery.watch","jquery.scrolleffects"],function(c){var $ = c;$(document).ready(function(){try{
+var muse_init=function(){require.config({baseUrl:""});require(["jquery","museutils","whatinput","jquery.watch","jquery.musepolyfill.bgsize","jquery.scrolleffects"],function(c){var $ = c;$(document).ready(function(){try{
 window.Muse.assets.check($);/* body */
 Muse.Utils.transformMarkupToFixBrowserProblemsPreInit();/* body */
 Muse.Utils.prepHyperlinks(true);/* body */
 Muse.Utils.resizeHeight('.browser_width');/* resize height */
 Muse.Utils.requestAnimationFrame(function() { $('body').addClass('initialized'); });/* mark body as initialized */
+Muse.Utils.initializeAnimations();/* animations */
 Muse.Utils.makeButtonsVisibleAfterSettingMinWidth();/* body */
 Muse.Utils.fullPage('#page');/* 100% height page */
 $('#u101').registerOpacityScrollEffect([{"fade":273,"in":[-Infinity,166],"opacity":90},{"in":[166,166],"opacity":100},{"fade":61,"in":[166,Infinity],"opacity":0}]);/* scroll effect */
+$('#u777').registerOpacityScrollEffect([{"fade":181.9,"in":[-Infinity,1006.9],"opacity":0},{"in":[1006.9,1006.9],"opacity":100},{"fade":50,"in":[1006.9,Infinity],"opacity":100}]);/* scroll effect */
+$('#u690').registerOpacityScrollEffect([{"fade":176.95,"in":[-Infinity,1004.95],"opacity":0},{"in":[1004.95,1004.95],"opacity":100},{"fade":398.05,"in":[1004.95,Infinity],"opacity":100}]);/* scroll effect */
+$('#u690').registerEdgeAnimateScrollEffect([{"in":[-Infinity,1004.95],"play":false},{"in":[1004.95,Infinity],"play":700}]);/* scroll effect */
 Muse.Utils.showWidgetsWhenReady();/* body */
 Muse.Utils.transformMarkupToFixBrowserProblems();/* body */
 }catch(b){if(b&&"function"==typeof b.notify?b.notify():Muse.Assert.fail("Error calling selector function: "+b),false)throw b;}})})};

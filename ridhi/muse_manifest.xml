@@ -1,22 +1,34 @@
-<manifest alg="2" build="2018.1.0.386" opt="false" iceEnabled="true" iceMarkupVersion="2" iceEnabledOptions="link,responsive,cachebuster,textStyling" exportTarget="other" domain="sagmayam.com" resolutions="1x" timestamp="1598548514420">
+<manifest alg="2" build="2018.1.0.386" opt="false" iceEnabled="true" iceMarkupVersion="2" iceEnabledOptions="link,responsive,cachebuster,textStyling" exportTarget="other" domain="sagmayam.com" resolutions="1x" timestamp="1598559098627">
   <folder name="assets">
+    <folder name="untitled-32">
+      <folder name="images">
+        <file name="anim_atlas_.png" crc="91000011" mt="1598558922000"/>
+        <file name="anim_atlas_2.png" crc="3904377352" mt="1598558922000"/>
+        <file name="anim_atlas_3.png" crc="331715513" mt="1598558922000"/>
+        <file name="CachedBmp_271.png" crc="359988831" mt="1598558922000"/>
+        <file name="Image2.png" crc="200414873" mt="1598558922000"/>
+        <file name="saved_backup_atlas_.png" crc="288453229" mt="1598558922000"/>
+      </folder>
+      <file name="saved_backup.js" crc="68294919" mt="1598558922000"/>
+      <file name="saved_backup.html" crc="4202095454" mt="1598558922000"/>
+    </folder>
     <folder name="untitled-3">
       <folder name="images">
-        <file name="anim_atlas_.png" crc="91000011" mt="1598548238000"/>
-        <file name="anim_atlas_2.png" crc="3904377352" mt="1598548238000"/>
-        <file name="anim_atlas_3.png" crc="331715513" mt="1598548238000"/>
-        <file name="CachedBmp_271.png" crc="359988831" mt="1598548238000"/>
-        <file name="Image2.png" crc="200414873" mt="1598548238000"/>
-        <file name="saved_backup_atlas_.png" crc="18368765" mt="1598548238000"/>
+        <file name="anim_atlas_.png" crc="91000011" mt="1598558581000"/>
+        <file name="anim_atlas_2.png" crc="3904377352" mt="1598558581000"/>
+        <file name="anim_atlas_3.png" crc="331715513" mt="1598558581000"/>
+        <file name="CachedBmp_271.png" crc="359988831" mt="1598558581000"/>
+        <file name="Image2.png" crc="200414873" mt="1598558581000"/>
+        <file name="saved_backup_atlas_.png" crc="288453229" mt="1598558581000"/>
       </folder>
-      <file name="saved_backup.js" crc="4118628292" mt="1598548238000"/>
-      <file name="saved_backup.html" crc="4202095454" mt="1598548238000"/>
+      <file name="saved_backup.js" crc="68294919" mt="1598558581000"/>
+      <file name="saved_backup.html" crc="4202095454" mt="1598558581000"/>
     </folder>
   </folder>
   <folder name="css">
     <file name="site_global.css" crc="444006867"/>
-    <file name="index.css" crc="3992495930" ref="index"/>
-    <file name="test--page.css" crc="4272066936" ref="test--page"/>
+    <file name="index.css" crc="8161467" ref="index"/>
+    <file name="test--page.css" crc="4144959809" ref="test--page"/>
   </folder>
   <folder name="scripts">
     <file name="jquery-1.8.3.min.js" crc="209076791" ref="index:test--page"/>
@@ -26,8 +38,13 @@
     <file name="jquery.watch.js" crc="51536988" ref="index:test--page"/>
     <file name="jquery.scrolleffects.js" crc="39568856" ref="index:test--page"/>
     <file name="require.js" crc="7928878" ref="index:test--page"/>
+    <file name="jquery.musepolyfill.bgsize.js" crc="4260645839" ref="index"/>
   </folder>
-  <folder name="images"/>
-  <file name="index.html" crc="446111043" seo="true" mt="1598463020125" redirect="true"/>
-  <file name="test--page.html" crc="147118269" seo="true" mt="1598548419349" redirect="true"/>
+  <folder name="images">
+    <file name="bg-copy.jpg" crc="3780668690" ref="index">
+      <caption webpage="index" alt=""/>
+    </file>
+  </folder>
+  <file name="index.html" crc="3994447417" seo="true" mt="1598559084295" redirect="true"/>
+  <file name="test--page.html" crc="4053094015" seo="true" mt="1598558723449" redirect="true"/>
 </manifest>
