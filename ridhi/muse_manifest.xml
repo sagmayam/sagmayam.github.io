@@ -1,22 +1,22 @@
-<manifest alg="2" build="2018.1.0.386" opt="false" iceEnabled="true" iceMarkupVersion="2" iceEnabledOptions="link,responsive,cachebuster,textStyling" exportTarget="other" domain="sagmayam.com" resolutions="1x" timestamp="1598475860200">
+<manifest alg="2" build="2018.1.0.386" opt="false" iceEnabled="true" iceMarkupVersion="2" iceEnabledOptions="link,responsive,cachebuster,textStyling" exportTarget="other" domain="sagmayam.com" resolutions="1x" timestamp="1598547756367">
   <folder name="assets">
     <folder name="untitled-3">
       <folder name="images">
-        <file name="anim_atlas_.png" crc="91000011" mt="1598475628000"/>
-        <file name="anim_atlas_2.png" crc="3904377352" mt="1598475628000"/>
-        <file name="anim_atlas_3.png" crc="331715513" mt="1598475628000"/>
-        <file name="CachedBmp_271.png" crc="359988831" mt="1598475628000"/>
-        <file name="Image2.png" crc="200414873" mt="1598475628000"/>
-        <file name="saved_backup_atlas_.png" crc="90516151" mt="1598475628000"/>
+        <file name="anim_atlas_.png" crc="91000011" mt="1598547630000"/>
+        <file name="anim_atlas_2.png" crc="3904377352" mt="1598547630000"/>
+        <file name="anim_atlas_3.png" crc="331715513" mt="1598547630000"/>
+        <file name="CachedBmp_271.png" crc="359988831" mt="1598547630000"/>
+        <file name="Image2.png" crc="200414873" mt="1598547630000"/>
+        <file name="saved_backup_atlas_.png" crc="90516151" mt="1598547630000"/>
       </folder>
-      <file name="saved_backup.js" crc="4241682498" mt="1598475628000"/>
-      <file name="saved_backup.html" crc="4202095454" mt="1598475628000"/>
+      <file name="saved_backup.js" crc="3983133374" mt="1598547630000"/>
+      <file name="saved_backup.html" crc="4202095454" mt="1598547630000"/>
     </folder>
   </folder>
   <folder name="css">
     <file name="site_global.css" crc="444006867"/>
     <file name="index.css" crc="3992495930" ref="index"/>
-    <file name="test--page.css" crc="474031241" ref="test--page"/>
+    <file name="test--page.css" crc="4272066936" ref="test--page"/>
   </folder>
   <folder name="scripts">
     <file name="jquery-1.8.3.min.js" crc="209076791" ref="index:test--page"/>
@@ -29,5 +29,5 @@
   </folder>
   <folder name="images"/>
   <file name="index.html" crc="446111043" seo="true" mt="1598463020125" redirect="true"/>
-  <file name="test--page.html" crc="3949766063" seo="true" mt="1598475848165" redirect="true"/>
+  <file name="test--page.html" crc="147118269" seo="true" mt="1598547710839" redirect="true"/>
 </manifest>

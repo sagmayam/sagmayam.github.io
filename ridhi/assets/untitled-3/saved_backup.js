@@ -11,7 +11,7 @@ lib.ssMetadata = [
 
 
 
-(lib.CachedBmp_410 = function() {
+(lib.CachedBmp_409 = function() {
 	this.initialize(ss["saved_backup_atlas_"]);
 	this.gotoAndStop(0);
 }).prototype = p = new cjs.Sprite();
@@ -2645,7 +2645,7 @@ p.nominalBounds = new cjs.Rectangle(-580.1,-90.5,1160.3000000000002,181);
 	this.initialize(mode,startPosition,loop,{});
 
 	// Layer_1
-	this.instance = new lib.CachedBmp_410();
+	this.instance = new lib.CachedBmp_409();
 	this.instance.setTransform(-12.6,-3.25,0.5,0.5);
 
 	this.timeline.addTween(cjs.Tween.get(this.instance).wait(1).to({x:-9.9,y:-4.45},0).wait(1).to({x:-7.15,y:-5.65},0).wait(1).to({x:-4.45,y:-6.8},0).wait(1).to({x:-1.75,y:-8},0).wait(1).to({x:0.95,y:-9.2},0).wait(1).to({x:3.7,y:-10.4},0).wait(1).to({x:6.4,y:-11.6},0).wait(1).to({x:9.1,y:-12.8},0).wait(1).to({x:11.85,y:-13.95},0).wait(1).to({x:14.55,y:-15.15},0).wait(1).to({x:17.25,y:-16.35},0).wait(1).to({x:20,y:-17.55},0).wait(1).to({x:22.7,y:-18.75},0).wait(1).to({x:25.4,y:-19.95},0).wait(1).to({x:28.1,y:-21.1},0).wait(1).to({x:30.85,y:-22.3},0).wait(1).to({x:33.55,y:-23.5},0).wait(1).to({x:36.25,y:-24.7},0).wait(1).to({x:39,y:-25.9},0).wait(1).to({x:41.7,y:-27.1},0).wait(1).to({x:44.4,y:-28.25},0).wait(1).to({x:47.1,y:-29.45},0).wait(1).to({x:49.85,y:-30.65},0).wait(1).to({x:52.55,y:-31.85},0).wait(1));
