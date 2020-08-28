@@ -16,18 +16,167 @@ if(typeof Muse == "undefined") window.Muse = {}; window.Muse.assets = {"required
   <title>Test- Page</title>
   <!-- CSS -->
   <link rel="stylesheet" type="text/css" href="css/site_global.css?crc=444006867"/>
-  <link rel="stylesheet" type="text/css" href="css/test--page.css?crc=3834629723" id="pagesheet"/>
+  <link rel="stylesheet" type="text/css" href="css/test--page.css?crc=3856119416" id="pagesheet"/>
    </head>
  <body>
 
-  <div class="clearfix" id="page"><!-- group -->
-   <div class="browser_width grpelem" id="u628-bw">
-    <div id="u628"><!-- simple frame --></div>
+  <div class="clearfix" id="page"><!-- column -->
+   <div class="position_content" id="page_position_content">
+    <div class="ose_pre_init colelem" id="u1175"><!-- custom html -->
+     <!DOCTYPE html>
+<html lang="en" >
+<head>
+  <meta charset="UTF-8">
+  <title>CodePen - Draggable button</title>
+  <style>body {
+  display: -webkit-box;
+  display: flex;
+  -webkit-box-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+          align-items: center;
+  height: 100vh;
+  overflow: hidden;
+  
+}
+
+.drag {
+  stroke: #95a5a6;
+  fill: none;
+}
+.drag .drag--path {
+  stroke-dasharray: 5;
+}
+.drag .drag--limit {
+  fill: white;
+  box-shadow: 0 0 0 3px white;
+}
+.drag .drag--button {
+  fill: #3498db;
+  stroke: none;
+  -webkit-transform-origin: center center;
+          transform-origin: center center;
+  -webkit-transition: -webkit-transform .3s;
+  transition: -webkit-transform .3s;
+  transition: transform .3s;
+  transition: transform .3s, -webkit-transform .3s;
+}
+.drag:not(.finished).dragging {
+  cursor: move;
+}
+.drag:not(.finished).dragging .drag--path {
+  -webkit-animation: offset .3s linear infinite;
+          animation: offset .3s linear infinite;
+}
+.drag:not(.finished) .drag--button {
+  cursor: move;
+  -webkit-transform: scale(0.8);
+          transform: scale(0.8);
+}
+.drag:not(.finished).dragging .drag--button,
+.drag:not(.finished) .drag--button:hover,
+.drag:not(.finished) .drag--button:focus {
+  -webkit-transform: scale(1);
+          transform: scale(1);
+}
+
+@-webkit-keyframes offset {
+  0% {
+    stroke-dashoffset: 10;
+  }
+  100% {
+    stroke-dashoffset: 0;
+  }
+}
+
+@keyframes offset {
+  0% {
+    stroke-dashoffset: 10;
+  }
+  100% {
+    stroke-dashoffset: 0;
+  }
+}</style>
+
+</head>
+<body>
+<!-- partial:index.partial.html -->
+<svg width="800" height="600" class="drag">
+  <!-- <path d="M50,250 A600,600,0,0,1,350,50" class="drag--path"></path> -->
+  <path d="M50,250c-11,-32,8,-114,20,-137c11,-22,44,-45,54,-46c9,-0,-3,2,2,0c5,-2,40,-6,50,1c9,7,23,28,29,41c5,12,16,46,14,61c-2,14,-10,51,-11,59c-0,7,2,-2,0,2c-2,4,-21,18,-29,19c-7,0,-19,-1,-25,-7c-5,-5,-13,-24,-16,-35c-2,-10,2,-43,10,-51c7,-7,21,-14,32,-17c10,-2,40,-2,50,3c9,5,27,17,37,21c9,3,30,4,41,3c10,-1,33,-12,40,-23c6,-10,11,-41,11,-55c-0,-13,-4,-27,-9,-39" class="drag--path"></path>
+  <circle cx="50" cy="250" r="20" class="drag--limit"></circle>
+  <circle cx="350" cy="50" r="20" class="drag--limit"></circle>
+  <image width="60" height="92.4" y="250" x="50" 
+class="drag--button"         xlink:href="https://sagmayam.github.io/loon.png">
+</svg>
+<!-- partial -->
+  <script>var drag   = document.querySelector('.drag'),
+    path   = document.querySelector('.drag--path'),
+    button = document.querySelector('.drag--button'),
+    shift  = button.getAttribute('cx'),
+    pathR  = path.getBoundingClientRect();
+
+function startDrag(event) {
+  drag.classList.add('dragging');  
+  document.addEventListener('mousemove', updateDrag);
+}
+
+function updateDrag(event) {
+  // On récupère les coordonnées de la souris
+  var x = event.pageX || event.clientX;
+  // On fixe des limites sur X, en se basant sur la taille du path
+  x = Math.max(x, pathR.left);
+  x = Math.min(x, pathR.left + pathR.width);
+  x -= pathR.left;
+  // On transforme cet avancement en longeur d'arc
+  var l = x * path.getTotalLength() / pathR.width;
+  // On récupère le point de l'arc à cet avancement
+  var point = path.getPointAtLength(l);
+  // On fixe les mêmes coordonnées au bouton
+  width = button.getAttribute('width');
+  height = button.getAttribute('height');
+  console.log(width,height)
+  button.setAttribute('x', point.x - width/2);
+  button.setAttribute('y', point.y - height/2);
+}
+
+function stopDrag(event) {
+  document.removeEventListener('mousemove', updateDrag);
+  drag.classList.remove('dragging');
+  var cx = parseFloat(button.getAttribute('x')),
+      point = path.getPointAtLength(0);
+  // On vérifie si on a dépassé 60% d'avancement
+  if (100 * (cx - shift) / pathR.width > 60) {
+    // Si oui, on défini le point de chute à la fin du path
+    point = path.getPointAtLength(path.getTotalLength());
+    button.setAttribute('x', point.x);
+    button.setAttribute('y', point.y);
+    finishDrag();
+  } else {
+    // Si non, on défini le point de chute au début du path
+    point = path.getPointAtLength(0);
+    button.setAttribute('x', point.x);
+    button.setAttribute('y', point.y);
+  }
+}
+
+function finishDrag() {
+  // On a emmené le bouton au bout, on désactive les événements
+  button.style.fill = '#9b59b6';
+  drag.classList.add('finished');
+  button.removeEventListener('mousedown', startDrag);
+  window.location.href = 'http://www.google.com';
+}
+
+button.addEventListener('mousedown', startDrag);
+document.addEventListener('mouseup', stopDrag);
+document.addEventListener('mouseleave', stopDrag);</script>
+
+</body>
+</html>
+    </div>
+    <div class="verticalspacer" data-offset-top="445" data-content-above-spacer="449" data-content-below-spacer="2488"></div>
    </div>
-   <div id="u573"><!-- animation -->
-    <iframe class="animationContainer an_invi" id="U901_animation" src="assets/untitled-3/saved_backup.html" scrolling="no"></iframe>
-   </div>
-   <div class="verticalspacer" data-offset-top="2552" data-content-above-spacer="2552" data-content-below-spacer="452"></div>
   </div>
   <!-- Other scripts -->
   <script type="text/javascript">
@@ -44,12 +193,9 @@ var muse_init=function(){require.config({baseUrl:""});require(["jquery","museuti
 window.Muse.assets.check($);/* body */
 Muse.Utils.transformMarkupToFixBrowserProblemsPreInit();/* body */
 Muse.Utils.prepHyperlinks(true);/* body */
-Muse.Utils.resizeHeight('.browser_width');/* resize height */
-Muse.Utils.requestAnimationFrame(function() { $('body').addClass('initialized'); });/* mark body as initialized */
-Muse.Utils.initializeAnimations();/* animations */
 Muse.Utils.makeButtonsVisibleAfterSettingMinWidth();/* body */
 Muse.Utils.fullPage('#page');/* 100% height page */
-$('#u573').registerEdgeAnimateScrollEffect([{"play":false,"in":[-Infinity,0]},{"play":700,"in":[0,Infinity]}]);/* scroll effect */
+$('#u1175').registerOpacityScrollEffect([{"opacity":0,"fade":183,"in":[-Infinity,3215.05]},{"opacity":0,"in":[3215.05,3215.05]},{"opacity":100,"fade":50,"in":[3215.05,Infinity]}]);/* scroll effect */
 Muse.Utils.showWidgetsWhenReady();/* body */
 Muse.Utils.transformMarkupToFixBrowserProblems();/* body */
 }catch(b){if(b&&"function"==typeof b.notify?b.notify():Muse.Assert.fail("Error calling selector function: "+b),false)throw b;}})})};
