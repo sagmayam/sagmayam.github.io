@@ -16,7 +16,7 @@ if(typeof Muse == "undefined") window.Muse = {}; window.Muse.assets = {"required
   <title>Home</title>
   <!-- CSS -->
   <link rel="stylesheet" type="text/css" href="css/site_global.css?crc=444006867"/>
-  <link rel="stylesheet" type="text/css" href="css/index.css?crc=4022825145" id="pagesheet"/>
+  <link rel="stylesheet" type="text/css" href="css/index.css?crc=4272782054" id="pagesheet"/>
    </head>
  <body>
 
@@ -273,7 +273,7 @@ document.body.onload = castParallax();
      <div class="museBGSize ose_pre_init" id="u777"><!-- simple frame --></div>
     </div>
     <div class="ose_pre_init" id="u690"><!-- animation -->
-     <iframe class="animationContainer an_invi" id="U1386_animation" src="assets/untitled-3/saved_backup.html" scrolling="no"></iframe>
+     <iframe class="animationContainer an_invi" id="U1523_animation" src="assets/untitled-3/saved_backup.html" scrolling="no"></iframe>
     </div>
     <div class="ose_pre_init" id="u1284"><!-- custom html -->
      <!DOCTYPE html>
@@ -455,13 +455,13 @@ Muse.Utils.requestAnimationFrame(function() { $('body').addClass('initialized');
 Muse.Utils.initializeAnimations();/* animations */
 Muse.Utils.makeButtonsVisibleAfterSettingMinWidth();/* body */
 Muse.Utils.fullPage('#page');/* 100% height page */
-$('#u101').registerOpacityScrollEffect([{"in":[-Infinity,166],"opacity":90,"fade":273},{"in":[166,166],"opacity":100},{"in":[166,Infinity],"opacity":0,"fade":61}]);/* scroll effect */
-$('#u777').registerOpacityScrollEffect([{"in":[-Infinity,1006.9],"opacity":0,"fade":181.9},{"in":[1006.9,1006.9],"opacity":100},{"in":[1006.9,Infinity],"opacity":100,"fade":50}]);/* scroll effect */
-$('#u690').registerOpacityScrollEffect([{"in":[-Infinity,1004.95],"opacity":0,"fade":176.95},{"in":[1004.95,1004.95],"opacity":100},{"in":[1004.95,Infinity],"opacity":100,"fade":398.05}]);/* scroll effect */
+$('#u101').registerOpacityScrollEffect([{"fade":273,"in":[-Infinity,166],"opacity":90},{"in":[166,166],"opacity":100},{"fade":61,"in":[166,Infinity],"opacity":0}]);/* scroll effect */
+$('#u777').registerOpacityScrollEffect([{"fade":181.9,"in":[-Infinity,1006.9],"opacity":0},{"in":[1006.9,1006.9],"opacity":100},{"fade":50,"in":[1006.9,Infinity],"opacity":100}]);/* scroll effect */
+$('#u690').registerOpacityScrollEffect([{"fade":176.95,"in":[-Infinity,1004.95],"opacity":0},{"in":[1004.95,1004.95],"opacity":100},{"fade":398.05,"in":[1004.95,Infinity],"opacity":100}]);/* scroll effect */
 $('#u690').registerEdgeAnimateScrollEffect([{"in":[-Infinity,1004.95],"play":false},{"in":[1004.95,Infinity],"play":700}]);/* scroll effect */
-$('#u1284').registerOpacityScrollEffect([{"in":[-Infinity,2833],"opacity":0,"fade":0},{"in":[2833,2833],"opacity":100},{"in":[2833,Infinity],"opacity":100,"fade":338}]);/* scroll effect */
-$('#u1344-4').registerOpacityScrollEffect([{"in":[-Infinity,2822],"opacity":0,"fade":0},{"in":[2822,2822],"opacity":100},{"in":[2822,Infinity],"opacity":100,"fade":338}]);/* scroll effect */
-$('#u1362-6').registerOpacityScrollEffect([{"in":[-Infinity,2855],"opacity":0,"fade":0},{"in":[2855,2855],"opacity":100},{"in":[2855,Infinity],"opacity":100,"fade":338}]);/* scroll effect */
+$('#u1284').registerOpacityScrollEffect([{"fade":0,"in":[-Infinity,2833],"opacity":0},{"in":[2833,2833],"opacity":100},{"fade":338,"in":[2833,Infinity],"opacity":100}]);/* scroll effect */
+$('#u1344-4').registerOpacityScrollEffect([{"fade":0,"in":[-Infinity,2822],"opacity":0},{"in":[2822,2822],"opacity":100},{"fade":338,"in":[2822,Infinity],"opacity":100}]);/* scroll effect */
+$('#u1362-6').registerOpacityScrollEffect([{"fade":0,"in":[-Infinity,2855],"opacity":0},{"in":[2855,2855],"opacity":100},{"fade":338,"in":[2855,Infinity],"opacity":100}]);/* scroll effect */
 Muse.Utils.showWidgetsWhenReady();/* body */
 Muse.Utils.transformMarkupToFixBrowserProblems();/* body */
 }catch(b){if(b&&"function"==typeof b.notify?b.notify():Muse.Assert.fail("Error calling selector function: "+b),false)throw b;}})})};
