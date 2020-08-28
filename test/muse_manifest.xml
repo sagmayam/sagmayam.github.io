@@ -1,4 +1,4 @@
-<manifest alg="2" build="2018.1.0.386" opt="false" iceEnabled="true" iceMarkupVersion="2" iceEnabledOptions="link,responsive,cachebuster,textStyling" exportTarget="other" domain="sagmayam.com" resolutions="1x" timestamp="1598649927991">
+<manifest alg="2" build="2018.1.0.386" opt="false" iceEnabled="true" iceMarkupVersion="2" iceEnabledOptions="link,responsive,cachebuster,textStyling" exportTarget="other" domain="sagmayam.com" resolutions="1x" timestamp="1598650084116">
   <folder name="assets">
     <folder name="float_h_min">
       <folder name="images">
@@ -67,6 +67,6 @@
   </folder>
   <file name="index.html" crc="4250132418" seo="true" mt="1598649832383" redirect="true"/>
   <file name="test--page.html" crc="4044893245" seo="true" mt="1598639904579" redirect="true"/>
-  <file name="nav.html" crc="3764849073" seo="true" mt="1598649893180" redirect="true"/>
+  <file name="nav.html" crc="368169646" seo="true" mt="1598650073074" redirect="true"/>
   <file name="gallery.html" crc="3883505774" seo="true" mt="1598644105979" redirect="true"/>
 </manifest>
