@@ -1,4 +1,4 @@
-<manifest alg="2" build="2018.1.0.386" opt="false" iceEnabled="true" iceMarkupVersion="2" iceEnabledOptions="link,responsive,cachebuster,textStyling" exportTarget="other" domain="sagmayam.com" resolutions="1x" timestamp="1598644586000">
+<manifest alg="2" build="2018.1.0.386" opt="false" iceEnabled="true" iceMarkupVersion="2" iceEnabledOptions="link,responsive,cachebuster,textStyling" exportTarget="other" domain="sagmayam.com" resolutions="1x" timestamp="1598644922183">
   <folder name="assets">
     <folder name="float_h_min">
       <folder name="images">
@@ -48,7 +48,7 @@
     <file name="site_global.css" crc="444006867"/>
     <file name="index.css" crc="4022825145" ref="index"/>
     <file name="test--page.css" crc="3856119416" ref="test--page"/>
-    <file name="nav.css" crc="4111598311" ref="nav"/>
+    <file name="nav.css" crc="4256513349" ref="nav"/>
     <file name="gallery.css" crc="95417774" ref="gallery"/>
   </folder>
   <folder name="scripts">
@@ -68,6 +68,6 @@
   </folder>
   <file name="index.html" crc="4293599928" seo="true" mt="1598642658534" redirect="true"/>
   <file name="test--page.html" crc="4044893245" seo="true" mt="1598639904579" redirect="true"/>
-  <file name="nav.html" crc="4232032114" seo="true" mt="1598644569144" redirect="true"/>
+  <file name="nav.html" crc="4122502652" seo="true" mt="1598644860466" redirect="true"/>
   <file name="gallery.html" crc="3883505774" seo="true" mt="1598644105979" redirect="true"/>
 </manifest>
